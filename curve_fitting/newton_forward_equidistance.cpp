@@ -11,13 +11,17 @@ vector<vector<double>> table_construction(vector<double> x, vector<double> y , i
 			table[row+1][col]= table[row+1][col-1]-table[row][col-1];	
 		}
 	}
-	
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			cout<<table[i][j]<<" ";
+		}
+		cout<<endl;
+	}
 	return table;
 	}
 	
 double forward_diff(vector<double> x, vector<double> y , int n, double k){
 	double s=(k-x[0])/(x[1]-x[0]);
-	
 	double ans= y[0];
 	vector<vector<double>> diff_table= table_construction(x,y,n);
 	for(int i=1;i<n;i++){
@@ -29,7 +33,7 @@ double forward_diff(vector<double> x, vector<double> y , int n, double k){
 	}
 	return ans;
 	}
-	
+
 int main(){
 	int n=6;
 	vector<double> x={-2,-1,0,1,2,3};
@@ -39,6 +43,5 @@ int main(){
 	cout<<forward_diff(x,y,n,k);
 	cout<<endl;
 	}
-
 //value of f at 0.5 is: 1.25
 

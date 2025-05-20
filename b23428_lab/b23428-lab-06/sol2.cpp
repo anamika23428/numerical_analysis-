@@ -36,7 +36,7 @@ double dy(double x, double y){
 double d(double x, double y){
 	return f1(x,y)* g2(x,y) - g1(x,y) * f2(x,y);}
 
-pair<double ,double > newton(double x0, double y0){
+pair<double , double> newton(double x0, double y0){
 	double x= x0 - dx(x0,y0)/d(x0,y0);
 	double y= y0 - dy(x0,y0)/d(x0,y0);
 	int iter =1;
@@ -44,7 +44,7 @@ pair<double ,double > newton(double x0, double y0){
 		x0=x;
 		y0=y;
 		x= x0 - dx(x0,y0)/d(x0,y0);
-	        y= y0 - dy(x0,y0)/d(x0,y0);
+		y= y0 - dy(x0,y0)/d(x0,y0);
 	        
 	        iter++;}
 	cout<<"Iterartions: "<<iter<<endl;

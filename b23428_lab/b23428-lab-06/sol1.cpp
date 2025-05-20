@@ -51,3 +51,5 @@ int main(){
 //x=solution: x: 0.539823 y: 0.926175
 
 
+//bisection
+//

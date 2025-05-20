@@ -24,3 +24,5 @@ n = 3
 
 solution = gauss_elimination(a, n)
 print("Solution x =", solution)
+
+

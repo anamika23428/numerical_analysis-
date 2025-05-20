@@ -4,8 +4,10 @@ using namespace std;
 #define tol 1e-12
 
 double fun(double x){
-	return (2+pow(x,2))/4;
+	//return (2+pow(x,2))/4;
+	return sqrt(4*x-2);
 	}
+
 //fixed point iteration
 double fixed_point_iteration(double x0){
 	double xi=fun(x0);

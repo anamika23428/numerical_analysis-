@@ -59,4 +59,5 @@ int main(){
     cout<<i1<<endl;
     cout<<i2<<endl;
     cout<<i3<<endl;
+    
 }
